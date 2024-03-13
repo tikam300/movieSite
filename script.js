@@ -13,23 +13,23 @@ function returnMovies(url){
     console.log(data.results);
     data.results.forEach(
       element => {
-        const div_card = documnet.createElement('div');
+        const div_card = document.createElement('div');
         div_card.setAttribute('class', 'card');
         
-        const div_row = documnet.createElement('div');
+        const div_row = document.createElement('div');
           div_row.setAttribute('class', 'row');
         
-        const div_column = documnet.createElement('div');
+        const div_column = document.createElement('div');
           div_column.setAttribute('class', 'column');
         
-        const image = documnet.createElement('img');
+        const image = document.createElement('img');
           image.setAttribute('class', 'thumbnail');
           image.setAttribute('id', 'image');
         
-        const title = documnet.createElement('h3');
+        const title = document.createElement('h3');
           title.setAttribute('id', 'title');
         
-        const center = documnet.createElement('center');
+        const center = document.createElement('center');
 
         title.innerHTML = `${element.title}`;
         image.src = IMG_PATH + element.poster_path;
@@ -42,8 +42,7 @@ function returnMovies(url){
 
         main.appendChild(div_row);
       });
-  });
-  
+  });  
 }
 
 form.addEventListener("submit",(e)=>{
